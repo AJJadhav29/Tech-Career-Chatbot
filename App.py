@@ -114,7 +114,7 @@ elif menu == "Mentor Match":
             # """, unsafe_allow_html=True)
             st.markdown(f"""
             <div style='padding: 1rem; border: 1px solid #DDD; border-radius: 10px; margin-bottom: 1rem; background-color: #f9f9f9; color: black;'>
-                <h4 style="margin-bottom: 0.3rem; color: black;">{mentor['name']}</h4>
+                <h4 style="margin-bottom: 0.3rem; color: inherit;">{mentor['name']}</h4>
                 <p style="margin: 0.2rem 0;">
                     <strong>📍 Location:</strong> {mentor['location']} &nbsp; | &nbsp;
                     <strong>💼 Field:</strong> {mentor['field']} &nbsp; | &nbsp;
