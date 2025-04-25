@@ -131,7 +131,7 @@ elif menu == "Learning Path":
         if reply:
             st.markdown(f"🤖: {reply}")
 
-=======
+
 #--------------- NEW Design CODE-------------------------#
 import streamlit as st
 import google.generativeai as genai
