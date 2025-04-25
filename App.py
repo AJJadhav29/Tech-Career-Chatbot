@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #--------------- NEW Design CODE-------------------------#
 import streamlit as st
 import google.generativeai as genai
@@ -264,4 +264,3 @@ elif menu == "Learning Path":
         if reply:
             st.markdown(f"🤖: {reply}")
 
->>>>>>> 9b5e4251fd6cd9ed7b316f8fa84c888b5819e84b
