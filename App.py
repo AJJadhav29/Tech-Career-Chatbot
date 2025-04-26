@@ -4,10 +4,15 @@ import google.generativeai as genai
 import fitz
 import docx
 import pandas as pd
+import time
 
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="Tech Career Coach", layout="wide")
 
+# --- Wake Up Mode---- #
+st_autorefresh = st.experimental_memo(lambda: time.time())
+if time.time() - st_autorefresh() > 600:  # 600 seconds = 10 minutes
+    st.experimental_rerun()
 # --- SIDEBAR NAVIGATION ---
 st.sidebar.title("🔍 Navigation")
 menu = st.sidebar.radio("Go to", ["Chatbot", "Resume Review", "Mentor Match", "Learning Path"])
