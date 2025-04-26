@@ -5,19 +5,13 @@ import fitz
 import docx
 import pandas as pd
 from streamlit_autorefresh import st_autorefresh
-import time
+
 
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="Tech Career Coach", layout="wide")
 
 # --- Wake Up Mode---- #
-count = st.experimental_get_query_params().get("count", [0])[0]
-count = int(count)
-
-if count < 10000:  # Limit to avoid infinite loop
-    time.sleep(600)  # Sleep for 600 seconds = 10 minutes
-    st.experimental_set_query_params(count=count + 1)
-    st.experimental_rerun()
+st_autorefresh(interval=10 * 60 * 1000, limit=None, key="auto_refresh")
 # --- SIDEBAR NAVIGATION ---
 st.sidebar.title("🔍 Navigation")
 menu = st.sidebar.radio("Go to", ["Chatbot", "Resume Review", "Mentor Match", "Learning Path"])
