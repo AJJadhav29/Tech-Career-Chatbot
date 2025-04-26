@@ -4,13 +4,14 @@ import google.generativeai as genai
 import fitz
 import docx
 import pandas as pd
+from streamlit_autorefresh import st_autorefresh
 import time
 
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="Tech Career Coach", layout="wide")
 
 # --- Wake Up Mode---- #
-ount = st.experimental_get_query_params().get("count", [0])[0]
+count = st.experimental_get_query_params().get("count", [0])[0]
 count = int(count)
 
 if count < 10000:  # Limit to avoid infinite loop
